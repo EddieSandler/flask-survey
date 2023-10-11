@@ -18,20 +18,20 @@ def get_survey():
 
     return render_template('base.html',title=title,instructions=instructions)
 
-@app.route('/questions/0')
+@app.route('/questions/0',methods=['POST','GET'])
 def show_question1():
 
     this_question=satisfaction_survey.questions[0].question
-    print(request.args)
 
 
     return render_template('question1.html',this_question=this_question)
 
 
-@app.route('/questions/1')
+@app.route('/questions/1',methods=['POST','GET'])
 def show_question2():
 
     this_question=satisfaction_survey.questions[1].question
+
 
 
     return render_template('question2.html',this_question=this_question)
@@ -46,18 +46,21 @@ def show_question3():
 
 
 
+
+
     return render_template('question3.html',this_question=this_question,choice1=choice_1,choice2=choice_2)
 
-@app.route('/questions/3')
+@app.route('/questions/3',methods=['POST','GET'])
 def show_question4():
 
     this_question=satisfaction_survey.questions[3].question
+  
 
 
 
     return render_template('question4.html',this_question=this_question)
 
-@app.route('/result')
+@app.route('/result',methods=['POST','GET'])
 def show_results():
 
 
