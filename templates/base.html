@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>{% block title %}{% endblock%}</title>
+</head>
+<body>
+  {% block content %}
+  <h1>  {{title}}</h1>
+  <p>  {{instructions}}</p>
+
+  <a href='/questions/0'><button>Start Survey</button></a>
+  {% endblock %}
+</body>
+</html>
